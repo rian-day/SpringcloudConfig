@@ -1,0 +1,25 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8763
+spring:
+  zipkin:
+    base-url: http://localhost:9411
+  application:
+    name: service-provider-1
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: hyh1051333460
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
